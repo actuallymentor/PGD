@@ -16,7 +16,7 @@ public class BlockTowerSpawn : MonoBehaviour {
 		if (_varHandler._killerPoints >= _varHandler._agentCostRegular){
     	        // Build Tower above Buildplace
 			GameObject _agentInstance = Instantiate(_agentPrefab);
-			_agentInstance.transform.position = transform.position + Vector3.up - new Vector3(0.5f,0,0.3f);
+			_agentInstance.transform.position = transform.position + Vector3.up - new Vector3(0,0,0);
 			_varHandler._killerPoints -= _varHandler._agentCostRegular;
 		}
 	}

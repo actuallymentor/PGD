@@ -2,11 +2,26 @@
 
 public class VariableHandler : MonoBehaviour {
 
-	// Player variables
-	public int _killerPoints = 5;
-	public int _hackerPoints = 5;
+	// Initialise variables
+	public int[] _agentCost;
+	public int _killerPoints;
+	public int _hackerPoints;
 
-	// Defensive tower control
-	public int _agentCostRegular = 5;
-	public int _agentCostCorporate = 10;
+	void Start() {
+	
+		// //////////////////
+		// Player variables
+		// //////////////////
+		_killerPoints = 1000;
+		_hackerPoints = 1000;
+	
+		// /////////////////////////
+		// Defensive tower control
+		// ////////////////////////
+
+		// Tower costs
+		_agentCost = new int[2];
+		_agentCost[0] = 5;
+		_agentCost[1] = 10;
+	}
 }
