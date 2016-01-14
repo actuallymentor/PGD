@@ -17,13 +17,13 @@ public class VariableHandler : MonoBehaviour {
 		_hackerPoints = 1000;
 	
 		// /////////////////////////
-		// Defensive tower control
+		// Defensive agent control
 		// ////////////////////////
 
 		// Tower costs
 		_agentCost = new int[2];
-		_agentCost[0] = 5;
-		_agentCost[1] = 10;
+		_agentCost[0] = 5; // Costs for a regular agent
+		_agentCost[1] = 10; // Costs for a corporate agent
 
 		// Current tower type
 		_agentType = 0;
