@@ -6,6 +6,7 @@ public class VariableHandler : MonoBehaviour {
 	public int[] _agentCost;
 	public int _killerPoints;
 	public int _hackerPoints;
+	public int _agentType;
 
 	void Start() {
 	
@@ -23,5 +24,8 @@ public class VariableHandler : MonoBehaviour {
 		_agentCost = new int[2];
 		_agentCost[0] = 5;
 		_agentCost[1] = 10;
+
+		// Current tower type
+		_agentType = 0;
 	}
 }
