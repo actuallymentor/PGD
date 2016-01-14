@@ -9,6 +9,9 @@ public class VariableHandler : MonoBehaviour {
 	public int _agentType;
 	public int[] _agentHealth;
 	public int _enemyStrength;
+	public int _agentDamage;
+	public int _enemyHealth;
+	public int _enemySpeed;
 
 	void Start() {
 
@@ -35,11 +38,16 @@ public class VariableHandler : MonoBehaviour {
 		_agentHealth[0] = 100; // Costs for a regular agent
 		_agentHealth[1] = 100; // Costs for a corporate agent
 
+		// Agent offense control
+		_agentDamage = 20;
+
 
 		// ////////////////////////
 		// Offensive agent control
 		// ////////////////////////
 		_enemyStrength = 5;
+		_enemyHealth = 100;
+		_enemySpeed = 1;
 
 	}
 }

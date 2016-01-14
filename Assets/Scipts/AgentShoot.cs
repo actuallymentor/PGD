@@ -22,6 +22,8 @@ public class AgentShoot : MonoBehaviour {
 		// Set agent type
 		_instanceAgentType = _varHandler._agentType;
 
+		Shoot (  ); 
+
 	}
 
 	void Update() {
