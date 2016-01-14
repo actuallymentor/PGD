@@ -3,16 +3,14 @@
 public class BlockTowerSpawn : MonoBehaviour {
 
  	// Instantiate used variables
-	public GameObject[] _agentPrefabs;
-	public VariableHandler _varHandler;
+	private GameObject[] _agentPrefabs;
+	private VariableHandler _varHandler;
 	public GameObject _regularAgent;
 	public GameObject _corporateAgent;
-
 
 	void Start() {
 		// Find the ground
 		GameObject theGround = GameObject.Find("Ground");
-
 		// Load the vriable handle of the ground into a local variable
 		_varHandler = theGround.GetComponent<VariableHandler>();
 
@@ -41,5 +39,6 @@ public class BlockTowerSpawn : MonoBehaviour {
 			_varHandler._killerPoints -= _varHandler._agentCost[_varHandler._agentType];
 		}
 	}
+
 
 }
