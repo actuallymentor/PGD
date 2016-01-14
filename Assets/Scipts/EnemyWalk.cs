@@ -13,6 +13,7 @@ public class EnemyWalk : MonoBehaviour {
 		GameObject theGround = GameObject.Find("Ground");
 		// Load the vriable handle of the ground into a local variable
 		_varHandler = theGround.GetComponent<VariableHandler>();
+		// load enemy speed
 		_enemySpeed = _varHandler._enemySpeed;
 	}
 	
@@ -20,4 +21,11 @@ public class EnemyWalk : MonoBehaviour {
 	void Update () {
 		transform.Translate(Vector3.back*_enemySpeed*Time.deltaTime);
 	}
+
+	void OnTriggerEnter ( Collider _otherObject ) {
+		if ( _otherObject.tag == "agent") {
+			_enemySpeed = 0;
+		}
+	} 
+
 }

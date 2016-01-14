@@ -55,6 +55,7 @@ public class AgentHealth : MonoBehaviour {
 	}
 
 	void TakeDamage () {
+		Debug.Log("Agent health: " + _instanceHealth);
 		_instanceHealth -= _varHandler._enemyStrength;
 	}
 

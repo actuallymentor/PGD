@@ -35,6 +35,7 @@ public class AgentProjectile : MonoBehaviour {
 		}
 	}
 
+	// Hurt the enemy if we bump into it
 	void OnTriggerEnter ( Collider _otherObject ) {
 		if ( _otherObject.tag == "enemy" ) {
 			_otherObject.GetComponent<EnemyHealth>()._instanceHealth -= _varHandler._agentDamage;
