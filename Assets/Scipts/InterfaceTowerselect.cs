@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PointsTowerSelect : MonoBehaviour {
+public class InterfaceTowerselect : MonoBehaviour {
 
 	public int _selectGridOut = 0;
 	public string[] _selectableStrings = new string[] {"Gov Agent", "Corp Agent", "Generator"};
@@ -20,9 +20,5 @@ public class PointsTowerSelect : MonoBehaviour {
 
 		_varHandler._agentType = _selectGridOut;
 
-
-
-		
 	}
-
 }

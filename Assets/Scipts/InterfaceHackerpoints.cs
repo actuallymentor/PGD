@@ -2,9 +2,9 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class PointsReputation : MonoBehaviour {
+public class InterfaceHackerpoints : MonoBehaviour {
 	private VariableHandler _varHandler;
-	private Text _reputationPoints;
+	private Text _hackerPoints;
 
 	// Use this for initialization
 	void Start () {
@@ -14,13 +14,13 @@ public class PointsReputation : MonoBehaviour {
 		_varHandler = theGround.GetComponent<VariableHandler>();
 
 		// Load the text element
-		_reputationPoints = GetComponent<Text>();
+		_hackerPoints = GetComponent<Text>();
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		_reputationPoints.text = _varHandler._reputationPoints.ToString();
+		_hackerPoints.text = _varHandler._hackerPoints.ToString();
 	
 	}
 }
