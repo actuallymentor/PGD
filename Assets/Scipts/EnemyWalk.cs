@@ -6,6 +6,7 @@ public class EnemyWalk : MonoBehaviour {
 	// Init variables
 	private VariableHandler _varHandler;
 	public int _enemySpeed;
+	private Collider _agentTower;
 
 	// Use this for initialization
 	void Start () {
@@ -20,10 +21,14 @@ public class EnemyWalk : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		transform.Translate(Vector3.back*_enemySpeed*Time.deltaTime);
+		if  ( !_agentTower ) {
+			_enemySpeed = _varHandler._enemySpeed;
+		}
 	}
 
 	void OnTriggerEnter ( Collider _otherObject ) {
 		if ( _otherObject.tag == "agent") {
+			_agentTower = _otherObject;
 			_enemySpeed = 0;
 		}
 	} 

@@ -7,6 +7,7 @@ public class BlockTowerSpawn : MonoBehaviour {
 	private VariableHandler _varHandler;
 	public GameObject _regularAgent;
 	public GameObject _corporateAgent;
+	public GameObject _generator;
 
 	void Start() {
 		// Find the ground
@@ -15,13 +16,16 @@ public class BlockTowerSpawn : MonoBehaviour {
 		_varHandler = theGround.GetComponent<VariableHandler>();
 
 		// Create an array of 2 to store the agent prefabs in
-		_agentPrefabs = new GameObject[2];
+		_agentPrefabs = new GameObject[3];
 
 		// Load the regular agent into the first array slot
 		_agentPrefabs[0] = _regularAgent;
 
 		// Load the corporate agent into the second array slot
 		_agentPrefabs[1] = _corporateAgent;
+
+		// Load the generator into the second array slot
+		_agentPrefabs[2] = _generator;
 	}
 
 	// Build an agent upon mouse release

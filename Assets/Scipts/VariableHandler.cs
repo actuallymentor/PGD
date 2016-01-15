@@ -57,7 +57,7 @@ public class VariableHandler : MonoBehaviour {
 		// ////////////////////////
 		// Offensive agent control
 		// ////////////////////////
-		_enemyStrength = 5;
+		_enemyStrength = 20;
 		_enemyHealth = 100;
 		_enemySpeed = 1;
 		_enemyValue = 5; // How much does killing an enemy gain in Killer Points
