@@ -12,6 +12,7 @@ public class VariableHandler : MonoBehaviour {
 	public int _agentDamage;
 	public int _enemyHealth;
 	public int _enemySpeed;
+	public int _enemyValue;
 
 	void Start() {
 
@@ -48,6 +49,7 @@ public class VariableHandler : MonoBehaviour {
 		_enemyStrength = 5;
 		_enemyHealth = 100;
 		_enemySpeed = 1;
+		_enemyValue = 5; // How much does killing an enemy gain in Killer Points
 
 	}
 }

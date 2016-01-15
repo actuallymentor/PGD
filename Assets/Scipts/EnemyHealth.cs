@@ -23,6 +23,7 @@ public class EnemyHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if ( _instanceHealth < 0 ) {
+			_varHandler._killerPoints += _varHandler._enemyValue;
 			Destroy ( gameObject ); 
 		}
 	
