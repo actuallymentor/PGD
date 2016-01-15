@@ -27,7 +27,7 @@ public class BlockTowerSpawn : MonoBehaviour {
 	// Build an agent upon mouse release
 	void OnMouseUpAsButton() {
 		// Check if KP are sufficient to build the current agent type
-		if (_varHandler._killerPoints >= _varHandler._agentCost[_varHandler._agentType]){
+		if (_varHandler._hackerPoints >= _varHandler._agentCost[_varHandler._agentType]){
 
 			// Create an instance of the current agent type
 			GameObject _agentInstance = Instantiate(_agentPrefabs[_varHandler._agentType]);
@@ -36,7 +36,7 @@ public class BlockTowerSpawn : MonoBehaviour {
 			_agentInstance.transform.position = transform.position + Vector3.up - new Vector3(0,0,0);
 
 			// Remove KP used to build the agent
-			_varHandler._killerPoints -= _varHandler._agentCost[_varHandler._agentType];
+			_varHandler._hackerPoints -= _varHandler._agentCost[_varHandler._agentType];
 		}
 	}
 
