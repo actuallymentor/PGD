@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: dac103f522cb3407aa276b82f529b983
+timeCreated: 1453547466
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: __ant_
+    100002: __ant__2
+    100004: __ant__3
+    100006: __ant__4
+    100008: Anim
+    100010: //RootNode
+    100012: Back
+    100014: Back_2
+    100016: Back_3
+    100018: Camera
+    100020: controllers
+    100022: front
+    100024: Head
+    100026: Head_2
+    100028: Head_3
+    100030: housing_
+    100032: Joint
+    100034: Joint1
+    100036: Joint1_2
+    100038: Joint1_3
+    100040: Joint1_4
+    100042: Joint1_5
+    100044: Joint1_6
+    100046: Joint2
+    100048: Joint2_2
+    100050: Joint2_3
+    100052: Joint2_4
+    100054: Joint2_5
+    100056: Joint2_6
+    100058: Joint3
+    100060: Joint3_2
+    100062: Joint3_3
+    100064: Joint3_4
+    100066: Joint3_5
+    100068: Joint3_6
+    100070: Joint_2
+    100072: Joint_3
+    100074: Joint_4
+    100076: Joint_5
+    100078: Joint_6
+    100080: L_Front_Foot
+    100082: L_Front_Foot_2
+    100084: Left_Front_Foot
+    100086: left_middle_foot
+    100088: left_middle_foot_2
+    100090: left_middle_foot_3
+    100092: left_rear_foot
+    100094: left_rear_foot_2
+    100096: left_rear_foot_3
+    100098: middle_
+    100100: middle__2
+    100102: Occlusion
+    100104: Righr_rear_foot
+    100106: Righr_rear_foot_2
+    100108: Righr_rear_foot_3
+    100110: Right_Front_foot
+    100112: Right_Front_foot_2
+    100114: Right_Front_foot_3
+    100116: right_middle_foot
+    100118: right_middle_foot_2
+    100120: right_middle_foot_3
+    100122: skeleton_
+    100124: Sky
+    400000: __ant_
+    400002: __ant__2
+    400004: __ant__3
+    400006: __ant__4
+    400008: Anim
+    400010: //RootNode
+    400012: Back
+    400014: Back_2
+    400016: Back_3
+    400018: Camera
+    400020: controllers
+    400022: front
+    400024: Head
+    400026: Head_2
+    400028: Head_3
+    400030: housing_
+    400032: Joint
+    400034: Joint1
+    400036: Joint1_2
+    400038: Joint1_3
+    400040: Joint1_4
+    400042: Joint1_5
+    400044: Joint1_6
+    400046: Joint2
+    400048: Joint2_2
+    400050: Joint2_3
+    400052: Joint2_4
+    400054: Joint2_5
+    400056: Joint2_6
+    400058: Joint3
+    400060: Joint3_2
+    400062: Joint3_3
+    400064: Joint3_4
+    400066: Joint3_5
+    400068: Joint3_6
+    400070: Joint_2
+    400072: Joint_3
+    400074: Joint_4
+    400076: Joint_5
+    400078: Joint_6
+    400080: L_Front_Foot
+    400082: L_Front_Foot_2
+    400084: Left_Front_Foot
+    400086: left_middle_foot
+    400088: left_middle_foot_2
+    400090: left_middle_foot_3
+    400092: left_rear_foot
+    400094: left_rear_foot_2
+    400096: left_rear_foot_3
+    400098: middle_
+    400100: middle__2
+    400102: Occlusion
+    400104: Righr_rear_foot
+    400106: Righr_rear_foot_2
+    400108: Righr_rear_foot_3
+    400110: Right_Front_foot
+    400112: Right_Front_foot_2
+    400114: Right_Front_foot_3
+    400116: right_middle_foot
+    400118: right_middle_foot_2
+    400120: right_middle_foot_3
+    400122: skeleton_
+    400124: Sky
+    4300000: __ant__4
+    7400000: Main
+    9500000: //RootNode
+    13700000: __ant__4
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

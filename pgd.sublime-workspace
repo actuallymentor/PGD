@@ -4,6 +4,58 @@
 		"selected_items":
 		[
 			[
+				"_enem",
+				"_enemySpeed	int"
+			],
+			[
+				"_agen",
+				"_agentType	int"
+			],
+			[
+				"_sele",
+				"_selectGridOut	int"
+			],
+			[
+				"_age",
+				"_agentType	int"
+			],
+			[
+				"Gt",
+				"GetComponent<T>()	T"
+			],
+			[
+				"GetC",
+				"GetComponent<T>()	T"
+			],
+			[
+				"Vector",
+				"Vector3	Vector3"
+			],
+			[
+				"_enemy",
+				"_enemyType	int"
+			],
+			[
+				"_",
+				"_enemyStrength	int"
+			],
+			[
+				"Can",
+				"CancelInvoke(string methodName)	void"
+			],
+			[
+				"Invoke",
+				"InvokeRepeating(string methodName, float time, float repeatRate)	void"
+			],
+			[
+				"Ray",
+				"RaycastHit()	RaycastHit()"
+			],
+			[
+				"_agent",
+				"_agentSight	RaycastHit"
+			],
+			[
 				"not_",
 				"not_important_not_urgent"
 			],
@@ -76,10 +128,6 @@
 				"varCont	variableControl"
 			],
 			[
-				"_",
-				"_timeyPoints	int"
-			],
-			[
 				"tard",
 				"TardisHealth	int"
 			],
@@ -111,6 +159,60 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Assets/Scipts/PointsHacker.cs",
+			"settings":
+			{
+				"buffer_size": 621,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "using UnityEngine;\nusing UnityEngine.UI;\nusing System.Collections;\n\npublic class PointsReputation : MonoBehaviour {\n	private VariableHandler _varHandler;\n	private Text _reputationPoints;\n\n	// Use this for initialization\n	void Start () {\n		// Find the ground\n		GameObject theGround = GameObject.Find(\"Ground\");\n		// Load the vriable handle of the ground into a local variable\n		_varHandler = theGround.GetComponent<VariableHandler>();\n\n		// Load the text element\n		_reputationPoints = GetComponent<Text>();\n	\n	}\n	\n	// Update is called once per frame\n	void Update () {\n		_reputationPoints.text = _varHandler._reputationPoints.ToString();\n	\n	}\n}\n",
+			"file": "Assets/Scipts/PointsReputation.cs",
+			"file_size": 646,
+			"file_write_time": 130973153080000000,
+			"settings":
+			{
+				"buffer_size": 643,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "using UnityEngine;\nusing System.Collections;\n\npublic class PointsTowerSelect : MonoBehaviour {\n\n	public int _selectGridOut = 0;\n	public string[] _selectableStrings = new string[] {\"Gov Agent\", \"Corp Agent\", \"Generator\"};\n	private VariableHandler _varHandler;\n\n	void Start (  ) {\n		// Find the ground\n		GameObject theGround = GameObject.Find(\"Ground\");\n		// Load the vriable handle of the ground into a local variable\n		_varHandler = theGround.GetComponent<VariableHandler>();\n	} \n\n	void OnGUI (  ) {\n\n		_selectGridOut = GUI.SelectionGrid(new Rect(300,320,200,100), _selectGridOut, _selectableStrings, 1);\n\n		_varHandler._agentType = _selectGridOut;\n\n	}\n\n}",
+			"file": "Assets/Scipts/PointsTowerSelect.cs",
+			"file_size": 658,
+			"file_write_time": 130973272290000000,
+			"settings":
+			{
+				"buffer_size": 655,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scipts/InterfaceHackerpoints.cs",
+			"settings":
+			{
+				"buffer_size": 632,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scipts/InterfaceReputationpoints.cs",
+			"settings":
+			{
+				"buffer_size": 652,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scipts/InterfaceTowerselect.cs",
+			"settings":
+			{
+				"buffer_size": 658,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -161,10 +263,31 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Mentor/Dev/unity/pgd-tower-defense"
+		"/Users/Mentor/Dev/unity/pgd-tower-defense",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts"
 	],
 	"file_history":
 	[
+		"/Users/Mentor/Downloads/nagios-installer-2.sh",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/PointsHacker.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/EnemyWalk.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/BlockTowerSpawn.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/PointsTowerSelect.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/PointsReputation.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/VariableHandler.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/GeneratorGenerate.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/AgentHealth.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/EnemyHealth.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/SpawnblockSpawn.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/BlockHighlight.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/AgentShoot.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/AgentProjectile.cs",
+		"/Users/Mentor/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/Mentor/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/RegAgentShoot.cs",
+		"/Users/Mentor/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/HighlightBlock.cs",
 		"/Users/Mentor/Dev/unity/pgd-tower-defense/pgd.sublime-project",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/pages.scss",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/views/interface/index.html.erb",
@@ -273,30 +396,11 @@
 		"/E/Downloads/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/tsz.nfo",
 		"/C/ProgramData/TechSmith/Camtasia Studio 8/RegInfo.ini",
 		"/C/Users/Mentor/Dev/idc-smus/www/README.md",
-		"/E/Downloads/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/readme.txt",
-		"/E/Downloads/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/www.TechTools.NET - www.ThumperDC.COM.txt",
-		"/C/Users/Mentor/Desktop/infograph (1).html",
-		"/C/Users/Mentor/Desktop/infograph.html",
-		"/C/Users/Mentor/Dev/idc-smus/www/wp-content/themes/spectrum-child/style.css",
-		"/C/Users/Mentor/Dev/idc-smus/www/wp-content/themes/spectrum-child/functions.php",
-		"/E/Downloads/Adobe Illustrator CC 2015 (v19.0) x86-x64 RUS-ENG{by M0nkrus}=-TEAM OS=-/m0nkrus.nfo",
-		"/E/Onedrive/1 - Work/Projects/Skill Collector/Infographics/Simple Template/Help file.txt",
-		"/C/Users/Mentor/Dev/idc-smus/setup.sh",
-		"/C/Users/Mentor/Dev/idc-smus/www/index.php",
-		"/C/Users/Mentor/Dev/idc-smus/Vagrantfile",
-		"/C/Users/Mentor/Dev/setup-script-LEMH-stack/setup.sh",
-		"/C/Users/Mentor/Dev/vagrant-smus/Vagrantfile",
-		"/E/Onedrive/Dev/Github/setup-script-LEMH-stack/README.md",
-		"/E/Onedrive/Dev/Github/setup-script-LEMH-stack/setup.sh",
-		"/E/Onedrive/Dev/Github/vagrant-smus/setup.sh",
-		"/E/Onedrive/Dev/Github/vagrant-smus/README.md",
-		"/E/Onedrive/Dev/vagrant-smus/setup.sh",
-		"/C/Users/Mentor/Servers/SMU/Vagrantfile",
-		"/C/Users/Mentor/AppData/Local/Temp/7zO55D4.tmp/README.md"
+		"/E/Downloads/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/readme.txt"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -310,6 +414,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"public VariableHandler _varHandler;",
+			"\\n",
+			"$0",
+			"${0:$SELECTION}",
+			"$0",
+			"_hackerPoints",
+			"_varControl",
 			"title=\"Important",
 			"tmp",
 			"$ ",
@@ -378,6 +489,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"private VariableHandler _varHandler;",
+			" ${0:$SELECTION} ",
+			" $0 ",
+			"_varHandler",
 			"title=\"Important task",
 			"",
 			"other_actions",
@@ -419,14 +534,212 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Assets/Scipts/PointsHacker.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								615,
+								615
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"41,46": "Using directive is not used by code and can be removed safely."
+							},
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scipts/PointsReputation.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 643,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								640,
+								116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scipts/PointsTowerSelect.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								655,
+								655
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"125,126": "Initializing field by default value is redundant",
+								"166,169": "Redundant array creation expression",
+								"170,176": "Redundant explicit array type specification",
+								"19,24": "Using directive is not used by code and can be removed safely."
+							},
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/Scipts/InterfaceHackerpoints.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 632,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								40,
+								40
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"41,46": "Using directive is not used by code and can be removed safely."
+							},
+							"syntax": "Packages/C#/C#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scipts/InterfaceReputationpoints.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 652,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								40,
+								40
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"41,46": "Using directive is not used by code and can be removed safely."
+							},
+							"syntax": "Packages/C#/C#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Scipts/InterfaceTowerselect.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								655,
+								655
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"128,129": "Initializing field by default value is redundant",
+								"169,172": "Redundant array creation expression",
+								"173,179": "Redundant explicit array type specification",
+								"19,24": "Using directive is not used by code and can be removed safely."
+							},
+							"syntax": "Packages/C#/C#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -465,13 +778,13 @@
 	},
 	"output.variable_get":
 	{
-		"height": 100.0
+		"height": 139.0
 	},
 	"pinned_build_system": "",
 	"project": "pgd.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":

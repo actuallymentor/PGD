@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class VariableHandler : MonoBehaviour {
 
@@ -23,7 +25,28 @@ public class VariableHandler : MonoBehaviour {
 	// Generators
 	public int _generatorPower;
 
+	// Interventions
+	public int _firewallCost;
+	public int _firewallPower;
+
+	// Spawn control
+	public int _spawnBlock;
+	public List<int> _spawnTimes;
+	public int[] _spawnInput;
+
 	void Start() {
+
+		// //////////////////
+		// Spawn control
+		// //////////////////
+		_spawnInput = new int[] {1, 5, 8, 9, 10, 11, 12, 13};
+
+		foreach( int _spawn in _spawnInput ) {
+			_spawnTimes.Add ( _spawn ); 
+        }
+
+		randomizeSpawn();
+		InvokeRepeating("randomizeSpawn", 1f, 1f);
 
 		// //////////////////
 		// Player variables
@@ -46,13 +69,18 @@ public class VariableHandler : MonoBehaviour {
 
 		// Agent health control
 		_agentHealth = new int[3];
-		_agentHealth[0] = 100; // Costs for a regular agent
-		_agentHealth[1] = 100; // Costs for a corporate agent
-		_agentHealth[2] = 100;
+		_agentHealth[0] = 10; // Health for a regular agent
+		_agentHealth[1] = 100; // Health for a corporate agent
+		_agentHealth[2] = 100; // Health for generator
 
 		// Agent offense control
 		_agentDamage = 20;
 
+		// /////////////////////////
+		// Intervention control
+		// ////////////////////////
+		_firewallCost = 100;
+		_firewallPower = 100;
 
 		// ////////////////////////
 		// Offensive agent control
@@ -67,4 +95,8 @@ public class VariableHandler : MonoBehaviour {
 		// ////////////////////////
 		_generatorPower = 5;
 	}
+
+	void randomizeSpawn  (  ) {
+		_spawnBlock = Random.Range(1, 6);
+	} 
 }

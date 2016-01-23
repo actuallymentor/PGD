@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class SpawnblockSpawn : MonoBehaviour {
 
 	private VariableHandler _varHandler;
 	private GameObject[] _enemyPrefab;
 	public GameObject _enemyHacker;
+	private int _times = 1;
+	public int _blockNumber;
+	public int _time;
 
 	// Use this for initialization
 	void Start () {
@@ -18,8 +22,17 @@ public class SpawnblockSpawn : MonoBehaviour {
 		_enemyPrefab = new GameObject[1];
 		_enemyPrefab[0] = _enemyHacker;
 
-		Spawn( 0 );
+		InvokeRepeating("spawncycle", 1f, 1f);
 	}
+
+	void spawncycle (  ) {
+		_time = (int)Time.time;
+		if  (  ( _varHandler._spawnBlock == _blockNumber ) &&  ( _varHandler._spawnTimes.Contains(_time) )   ) {
+			Spawn ( 0 );
+		} 
+	}
+
+
 	
 	void Spawn ( int _enemyType ) {
 		GameObject _hackerInstance = Instantiate(_enemyPrefab[_enemyType]);

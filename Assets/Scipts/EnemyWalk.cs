@@ -20,7 +20,7 @@ public class EnemyWalk : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate(Vector3.back*_enemySpeed*Time.deltaTime);
+		transform.Translate(Vector3.right*_enemySpeed*Time.deltaTime);
 		if  ( !_agentTower ) {
 			_enemySpeed = _varHandler._enemySpeed;
 		}

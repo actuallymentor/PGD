@@ -37,7 +37,7 @@ public class AgentHealth : MonoBehaviour {
 		// Set say position and direction
 		var _agentEyes = new Ray(transform.position, transform.TransformDirection(Vector3.forward));
 		// Check if enemy is in sight
-		if ( Physics.Raycast(_agentEyes, out _agentSight, 2.0f) ) {
+		if ( Physics.Raycast(_agentEyes, out _agentSight, 1.0f) ) {
 
 			// Shoot only if the object in sight is an enemy
 			if ( _agentSight.collider.tag == "enemy" && !_takingDamage) {
