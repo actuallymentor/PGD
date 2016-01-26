@@ -24,6 +24,9 @@ public class AgentFirewall : MonoBehaviour {
 			// Put the new instance on top of the buildplace
 			_agentInstance.transform.position = transform.position + Vector3.up - new Vector3(0,1,-0.5f);
 
+			// Link it to parent
+			_agentInstance.transform.parent = gameObject.transform;
+
 			// Remove KP used to build the agent
 			_varHandler._reputationPoints -= _varHandler._firewallCost;
 

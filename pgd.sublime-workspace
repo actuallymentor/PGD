@@ -5,7 +5,35 @@
 		[
 			[
 				"_enem",
-				"_enemySpeed	int"
+				"_enemyStrength	int"
+			],
+			[
+				"_spa",
+				"_spawnTimes	List<int>"
+			],
+			[
+				"_sp",
+				"_spawnTimes	List<int>"
+			],
+			[
+				"_spawn",
+				"_spawnTimes	int[]"
+			],
+			[
+				"INvoke",
+				"InvokeRepeating(string methodName, float time, float repeatRate)	void"
+			],
+			[
+				"_fi",
+				"_firewallPower	int"
+			],
+			[
+				"Agen",
+				"AgentHealth	AgentHealth"
+			],
+			[
+				"GetCom",
+				"GetComponent<T>()	T"
 			],
 			[
 				"_agen",
@@ -160,56 +188,50 @@
 	"buffers":
 	[
 		{
-			"file": "Assets/Scipts/PointsHacker.cs",
+			"file": "Assets/Scipts/VariableHandler.cs",
 			"settings":
 			{
-				"buffer_size": 621,
+				"buffer_size": 2341,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "using UnityEngine;\nusing UnityEngine.UI;\nusing System.Collections;\n\npublic class PointsReputation : MonoBehaviour {\n	private VariableHandler _varHandler;\n	private Text _reputationPoints;\n\n	// Use this for initialization\n	void Start () {\n		// Find the ground\n		GameObject theGround = GameObject.Find(\"Ground\");\n		// Load the vriable handle of the ground into a local variable\n		_varHandler = theGround.GetComponent<VariableHandler>();\n\n		// Load the text element\n		_reputationPoints = GetComponent<Text>();\n	\n	}\n	\n	// Update is called once per frame\n	void Update () {\n		_reputationPoints.text = _varHandler._reputationPoints.ToString();\n	\n	}\n}\n",
-			"file": "Assets/Scipts/PointsReputation.cs",
-			"file_size": 646,
-			"file_write_time": 130973153080000000,
+			"file": "Assets/Scipts/AgentFirewall.cs",
 			"settings":
 			{
-				"buffer_size": 643,
+				"buffer_size": 1170,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "using UnityEngine;\nusing System.Collections;\n\npublic class PointsTowerSelect : MonoBehaviour {\n\n	public int _selectGridOut = 0;\n	public string[] _selectableStrings = new string[] {\"Gov Agent\", \"Corp Agent\", \"Generator\"};\n	private VariableHandler _varHandler;\n\n	void Start (  ) {\n		// Find the ground\n		GameObject theGround = GameObject.Find(\"Ground\");\n		// Load the vriable handle of the ground into a local variable\n		_varHandler = theGround.GetComponent<VariableHandler>();\n	} \n\n	void OnGUI (  ) {\n\n		_selectGridOut = GUI.SelectionGrid(new Rect(300,320,200,100), _selectGridOut, _selectableStrings, 1);\n\n		_varHandler._agentType = _selectGridOut;\n\n	}\n\n}",
-			"file": "Assets/Scipts/PointsTowerSelect.cs",
-			"file_size": 658,
-			"file_write_time": 130973272290000000,
+			"file": "Assets/Scipts/AgentHealth.cs",
 			"settings":
 			{
-				"buffer_size": 655,
+				"buffer_size": 1602,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Scipts/InterfaceHackerpoints.cs",
+			"file": "Assets/Scipts/SpawnblockSpawn.cs",
 			"settings":
 			{
-				"buffer_size": 632,
+				"buffer_size": 1038,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Scipts/InterfaceReputationpoints.cs",
+			"file": "Assets/Scipts/HomeHealth.cs",
 			"settings":
 			{
-				"buffer_size": 652,
+				"buffer_size": 1521,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Scipts/InterfaceTowerselect.cs",
+			"file": "Assets/Scipts/AgentProjectile.cs",
 			"settings":
 			{
-				"buffer_size": 658,
+				"buffer_size": 1240,
 				"line_ending": "Unix"
 			}
 		}
@@ -265,19 +287,24 @@
 	[
 		"/Users/Mentor/Dev/unity/pgd-tower-defense",
 		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/FX_Kandol_Pack",
 		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts"
 	],
 	"file_history":
 	[
-		"/Users/Mentor/Downloads/nagios-installer-2.sh",
-		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/PointsHacker.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/AgentFirewall.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/AgentHealth.cs",
 		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/EnemyWalk.cs",
 		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/BlockTowerSpawn.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/PointsHacker.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/InterfaceTowerselect.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/InterfaceReputationpoints.cs",
+		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/InterfaceHackerpoints.cs",
 		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/PointsTowerSelect.cs",
 		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/PointsReputation.cs",
+		"/Users/Mentor/Downloads/nagios-installer-2.sh",
 		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/VariableHandler.cs",
 		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/GeneratorGenerate.cs",
-		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/AgentHealth.cs",
 		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/EnemyHealth.cs",
 		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/SpawnblockSpawn.cs",
 		"/Users/Mentor/Dev/unity/pgd-tower-defense/Assets/Scipts/BlockHighlight.cs",
@@ -392,11 +419,7 @@
 		"/C/Users/Mentor/.ssh/known_hosts",
 		"/C/Users/Mentor/internet.log",
 		"/C/Users/Mentor/mercurial.ini",
-		"/C/Users/Mentor/.gitconfig",
-		"/E/Downloads/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/tsz.nfo",
-		"/C/ProgramData/TechSmith/Camtasia Studio 8/RegInfo.ini",
-		"/C/Users/Mentor/Dev/idc-smus/www/README.md",
-		"/E/Downloads/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/TechSmith Camtasia Studio v8.6.0 Build 2054 + Crack [TechTools.NET]/readme.txt"
+		"/C/Users/Mentor/.gitconfig"
 	],
 	"find":
 	{
@@ -539,26 +562,60 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/Scipts/PointsHacker.cs",
+					"file": "Assets/Scipts/VariableHandler.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 621,
+						"buffer_size": 2341,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								615,
-								615
+								1801,
+								1801
 							]
 						],
 						"settings":
 						{
 							"oops":
 							{
-								"41,46": "Using directive is not used by code and can be removed safely."
+								"19,24": "Using directive is not used by code and can be removed safely.",
+								"803,806": "Redundant explicit array type specification"
+							},
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 754.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scipts/AgentFirewall.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								122
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"19,24": "Using directive is not used by code and can be removed safely."
 							},
 							"syntax": "Packages/C#/C#.tmLanguage",
 							"translate_tabs_to_spaces": false
@@ -567,24 +624,130 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "Assets/Scipts/PointsReputation.cs",
+					"buffer": 2,
+					"file": "Assets/Scipts/AgentHealth.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 643,
+						"buffer_size": 1602,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								640,
-								116
+								516,
+								343
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/Scipts/SpawnblockSpawn.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1038,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								628,
+								628
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"19,24": "Using directive is not used by code and can be removed safely.",
+								"228,234": "Convert to constant",
+								"45,50": "Using directive is not used by code and can be removed safely.",
+								"877,887": "no known errors."
+							},
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "Assets/Scipts/HomeHealth.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1521,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								688,
+								688
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"19,24": "Using directive is not used by code and can be removed safely.",
+								"210,221": "Name should have prefix '_'. (Rule 'Fields').",
+								"237,252": "Name should have prefix '_'. (Rule 'Fields').",
+								"479,487": "Parameter can be declared with base type"
+							},
+							"syntax": "Packages/C#/C#.tmLanguage"
+						},
+						"translation.x": 2.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Scipts/AgentProjectile.cs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1240,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -597,141 +760,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/Scipts/PointsTowerSelect.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 655,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								655,
-								655
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"125,126": "Initializing field by default value is redundant",
-								"166,169": "Redundant array creation expression",
-								"170,176": "Redundant explicit array type specification",
-								"19,24": "Using directive is not used by code and can be removed safely."
-							},
-							"syntax": "Packages/C#/C#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Assets/Scipts/InterfaceHackerpoints.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 632,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40,
-								40
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"41,46": "Using directive is not used by code and can be removed safely."
-							},
-							"syntax": "Packages/C#/C#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Assets/Scipts/InterfaceReputationpoints.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 652,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40,
-								40
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"41,46": "Using directive is not used by code and can be removed safely."
-							},
-							"syntax": "Packages/C#/C#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Assets/Scipts/InterfaceTowerselect.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 658,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								655,
-								655
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"128,129": "Initializing field by default value is redundant",
-								"169,172": "Redundant array creation expression",
-								"173,179": "Redundant explicit array type specification",
-								"19,24": "Using directive is not used by code and can be removed safely."
-							},
-							"syntax": "Packages/C#/C#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -754,11 +782,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":

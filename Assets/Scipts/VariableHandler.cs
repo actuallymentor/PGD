@@ -39,7 +39,7 @@ public class VariableHandler : MonoBehaviour {
 		// //////////////////
 		// Spawn control
 		// //////////////////
-		_spawnInput = new int[] {1, 5, 8, 9, 10, 11, 12, 13};
+		_spawnInput = new int[] {1, 10, 15, 20, 25, 30, 32, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60};
 
 		foreach( int _spawn in _spawnInput ) {
 			_spawnTimes.Add ( _spawn ); 
@@ -51,8 +51,8 @@ public class VariableHandler : MonoBehaviour {
 		// //////////////////
 		// Player variables
 		// //////////////////
-		_reputationPoints = 1000;
-		_hackerPoints = 1000;
+		_reputationPoints = 100;
+		_hackerPoints = 10;
 
 		// /////////////////////////
 		// Defensive agent control
@@ -74,12 +74,12 @@ public class VariableHandler : MonoBehaviour {
 		_agentHealth[2] = 100; // Health for generator
 
 		// Agent offense control
-		_agentDamage = 20;
+		_agentDamage = 15;
 
 		// /////////////////////////
 		// Intervention control
 		// ////////////////////////
-		_firewallCost = 100;
+		_firewallCost = 10;
 		_firewallPower = 100;
 
 		// ////////////////////////
@@ -93,7 +93,7 @@ public class VariableHandler : MonoBehaviour {
 		// ////////////////////////
 		// Generators
 		// ////////////////////////
-		_generatorPower = 5;
+		_generatorPower = 1;
 	}
 
 	void randomizeSpawn  (  ) {
